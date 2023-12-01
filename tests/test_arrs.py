@@ -8,12 +8,12 @@ import pytest
 	([1, 2, 3], -1, None, None)
 ])
 def test_get(arr, indx, deflt, result):
-	assert arrs.get(arr, indx, deflt) == result
+	assert arrs.get_index(arr, indx, deflt) == result
 
 
 def test_get_errors():
 	with pytest.raises(IndexError):
-		assert arrs.get([], 0, 'test' == 'test')
+		assert arrs.get_index([], 0, 'test' == 'test')
 
 
 @pytest.mark.parametrize("coll, start, end, result", [
